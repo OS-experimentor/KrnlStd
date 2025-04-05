@@ -168,28 +168,6 @@ void reboot() {
 }
 
 
-void parse(const char *cmd) {
-    if (cmpn(cmd, "ECHO ", 5) == 0) {
-        putstr(cmd + 5);
-    }
-
-    else if (cmp(cmd, "REBOOT") == 0) {
-        reboot();
-    }
-
-    else {
-        putstr("INVALID COMMAND: ");
-        if (cmpn(cmd, "ECHO", 2) == 0) {
-            putstr("DID YOU MEAN ECHO?");
-        }
-
-        else if (cmpn(cmd, "REBOOT", 2) == 0) {
-            putstr("DID YOU MEAN REBOOT?");
-        }
-    }
-}
-
-
 
 
 #endif
